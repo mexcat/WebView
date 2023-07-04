@@ -2,4 +2,7 @@
     <string name="app_name">WebView</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="insert_vaild_url">ingrese una url válida</string>
+    <string name="go">Ir</string>
+    <string name="back">Volver</string>
 </resources>

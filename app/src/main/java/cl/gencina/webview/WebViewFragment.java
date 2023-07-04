@@ -3,13 +3,10 @@ package cl.gencina.webview;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.util.Log;
+import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 
 import cl.gencina.webview.databinding.FragmentWebViewBinding;
 
@@ -42,9 +39,12 @@ public class WebViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentWebViewBinding.inflate(getLayoutInflater(),container,false);
         binding.wvMuestra.loadUrl(url);
-        binding.btnVolver.setOnClickListener(v -> {});
+        binding.btnVolver.setOnClickListener(v -> back());
         return binding.getRoot();
     }
 
-
+    private void back(){
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        fm.popBackStack();
+    }
 }
