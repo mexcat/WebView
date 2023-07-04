@@ -40,7 +40,7 @@ public class SearchFragment extends Fragment {
 
     private void callFragment(String url) {
         WebViewFragment navegador = WebViewFragment.newInstance(url);
-        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fcv, navegador, "NAVEGADOR");
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fcv, navegador, "NAVEGADOR").addToBackStack(null);
         transaction.commit();
     }
 }
